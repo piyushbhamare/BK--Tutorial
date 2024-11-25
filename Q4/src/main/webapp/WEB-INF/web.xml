@@ -1,0 +1,25 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+                             http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+    <servlet>
+        <servlet-name>RegisterStudentServlet</servlet-name>
+        <servlet-class>com.example.RegisterStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterStudentServlet</servlet-name>
+        <url-pattern>/RegisterStudentServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ShowStudentReportServlet</servlet-name>
+        <servlet-class>com.example.ShowStudentReportServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowStudentReportServlet</servlet-name>  <!-- Corrected this line -->
+        <url-pattern>/ShowStudentReportServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>

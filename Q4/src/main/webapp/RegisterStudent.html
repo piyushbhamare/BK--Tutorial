@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333333;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+            margin-right: 15px;
+        }
+
+        label {
+            font-size: 1em;
+            color: #555555;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 1em;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            font-size: 1em;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Secondary Form Styling */
+        form + form {
+            margin-top: 20px;
+        }
+
+        form + form input[type="submit"] {
+            background-color: #28a745;
+        }
+
+        form + form input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Student Registration Form</h2>
+        <form action="RegisterStudentServlet" method="post">
+            <div class="form-group">
+                <label for="rollno">Roll No:</label>
+                <input type="number" id="rollno" name="rollno" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="maths">Marks in Maths:</label>
+                <input type="number" id="maths" name="maths" required>
+            </div>
+            <div class="form-group">
+                <label for="science">Marks in Science:</label>
+                <input type="number" id="science" name="science" required>
+            </div>
+            <div class="form-group">
+                <label for="english">Marks in English:</label>
+                <input type="number" id="english" name="english" required>
+            </div>
+            <input type="submit" value="Register Student">
+        </form>
+        <form action="ShowStudentReportServlet" method="post">
+            <input type="submit" value="Show Student Report">
+        </form>
+    </div>
+</body>
+</html>
